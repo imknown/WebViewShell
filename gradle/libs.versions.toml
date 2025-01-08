@@ -1,0 +1,41 @@
+[versions]
+isPreview = "false" # true
+
+# https://developer.android.com/studio/releases/build-tools.html#notes
+buildTools = "36.0.0"
+buildToolsPreview = "36.0.0"
+
+minSdk = "23"
+
+compileSdk = "36"
+compileSdkPreview = "C"
+
+compileSdkExtension = "17" # 36-ext17 (Android 16 Beta 3)
+
+targetSdk = "36"
+targetSdkPreview = "C"
+
+agp = "8.11.0"
+
+activity = "1.11.0-rc01"
+appcompat = "1.7.1"
+constraintlayout = "2.2.1"
+core = "1.16.0"
+webkit = "1.14.0"
+
+kotlin = "2.2.0"
+
+material = "1.12.0"
+
+[libraries]
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+androidx-webkit = { group = "androidx.webkit", name = "webkit", version.ref = "webkit" }
+
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

@@ -11,38 +11,90 @@
         android:id="@+id/etUrl"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints="autofillHints"
+        android:hint="URL"
         android:inputType="textUri"
-        app:layout_constraintEnd_toStartOf="@+id/btnGo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="Autofill,LabelFor" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etUrl" />
 
     <Button
         android:id="@+id/btnGo"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
         android:padding="0dp"
         android:text="Go"
-        app:layout_constraintBottom_toBottomOf="@+id/etUrl"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUrl" />
+
+    <Button
+        android:id="@+id/btnLog"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:padding="0dp"
+        android:text="Log"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:padding="0dp"
+        android:text="Clr"
+        app:layout_constraintStart_toEndOf="@id/btnLog"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <Spinner
+        android:id="@+id/spinnerProxy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLog"
+        app:layout_constraintEnd_toStartOf="@+id/btnGo"
+        app:layout_constraintStart_toEndOf="@+id/btnClear"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#333"
+        app:layout_constraintTop_toBottomOf="@+id/btnLog" />
 
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/svLog"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUrl" />
+        app:layout_constraintTop_toBottomOf="@+id/vLine" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/etUrl"
-        app:layout_constraintEnd_toStartOf="@+id/btnGo"
-        app:layout_constraintTop_toTopOf="@+id/etUrl" />
+    <ScrollView
+        android:id="@+id/svLog"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:paddingHorizontal="1dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:textSize="13sp"
+            tools:text="Log" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
