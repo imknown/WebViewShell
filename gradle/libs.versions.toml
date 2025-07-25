@@ -23,7 +23,7 @@ constraintlayout = "2.2.1"
 core = "1.16.0"
 webkit = "1.14.0"
 
-kotlin = "2.2.0"
+kotlin = "2.2.10-RC"
 
 material = "1.12.0"
 
