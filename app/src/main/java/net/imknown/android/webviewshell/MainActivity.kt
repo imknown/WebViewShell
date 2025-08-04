@@ -36,7 +36,7 @@ import androidx.webkit.WebViewCompat
 import androidx.webkit.WebViewFeature
 import com.google.android.material.color.DynamicColors
 import net.imknown.android.webviewshell.databinding.ActivityMainBinding
-import com.google.android.material.R as MaterialR
+import androidx.appcompat.R as AppCompatR
 
 class MainActivity : AppCompatActivity() {
 
@@ -109,7 +109,7 @@ class MainActivity : AppCompatActivity() {
 
         spinnerProxy.adapter = ArrayAdapter(
             this,
-            MaterialR.layout.support_simple_spinner_dropdown_item,
+            AppCompatR.layout.support_simple_spinner_dropdown_item,
             proxies.map(Proxy::name)
         )
         spinnerProxy.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
