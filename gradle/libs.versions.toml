@@ -3,29 +3,29 @@ isPreview = "false" # true
 
 # https://developer.android.com/studio/releases/build-tools.html#notes
 buildTools = "36.0.0"
-buildToolsPreview = "36.0.0"
+buildToolsPreview = "36.1.0-rc1"
 
 minSdk = "23"
 
 compileSdk = "36"
 compileSdkPreview = "CANARY"
 
-compileSdkExtension = "17" # 36-ext17 (Android 16 Beta 3)
+compileSdkExtension = "19"
 
 targetSdk = "36"
 targetSdkPreview = "CANARY"
 
-agp = "8.12.0"
+agp = "8.13.0"
 
 activity = "1.11.0-rc01"
 appcompat = "1.7.1"
 constraintlayout = "2.2.1"
-core = "1.17.0-rc01"
+core = "1.17.0"
 webkit = "1.14.0"
 
-kotlin = "2.2.10-RC"
+kotlin = "2.2.20-RC2"
 
-material = "1.13.0-rc01"
+material = "1.13.0"
 
 [libraries]
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
