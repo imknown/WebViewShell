@@ -2,8 +2,8 @@
 isPreview = "false" # true
 
 # https://developer.android.com/studio/releases/build-tools.html#notes
-buildTools = "36.0.0"
-buildToolsPreview = "36.1.0-rc1"
+buildTools = "36.1.0"
+buildToolsPreview = "36.1.0"
 
 minSdk = "23"
 
@@ -17,13 +17,13 @@ targetSdkPreview = "CANARY"
 
 agp = "8.13.0"
 
-activity = "1.11.0-rc01"
+activity = "1.11.0"
 appcompat = "1.7.1"
 constraintlayout = "2.2.1"
 core = "1.17.0"
 webkit = "1.14.0"
 
-kotlin = "2.2.20-RC2"
+kotlin = "2.2.20"
 
 material = "1.13.0"
 
