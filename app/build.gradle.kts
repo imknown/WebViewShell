@@ -3,15 +3,21 @@ plugins {
     alias(libs.plugins.kotlin.android)
 }
 
+private val buildVersion = libs.versions
+
 android {
-    compileSdk = libs.versions.compileSdk.get().toInt()
-    // compileSdkExtension = libs.versions.compileSdkExtension.get().toInt()
-    buildToolsVersion = libs.versions.buildTools.get()
-    val isPreview = libs.versions.isPreview.get().toBoolean()
-    if (isPreview) {
-        compileSdkPreview = libs.versions.compileSdkPreview.get()
-        buildToolsVersion = libs.versions.buildToolsPreview.get()
+    val isPreview = buildVersion.isPreview.get().toBoolean()
+    compileSdk {
+        version = if (isPreview) {
+            preview(buildVersion.compileSdkPreview.get())
+        } else {
+            release(buildVersion.compileSdk.get().toInt()) {
+                minorApiLevel = buildVersion.compileSdkMinor.get().toInt()
+                // sdkExtension = buildVersion.compileSdkExtension.get().toInt()
+            }
+        }
     }
+    buildToolsVersion = (if (isPreview) buildVersion.buildToolsPreview else buildVersion.buildTools).get()
 
     namespace = "net.imknown.android.webviewshell"
 

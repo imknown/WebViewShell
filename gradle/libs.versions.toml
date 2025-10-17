@@ -8,6 +8,7 @@ buildToolsPreview = "36.1.0"
 minSdk = "23"
 
 compileSdk = "36"
+compileSdkMinor = "1"
 compileSdkPreview = "CANARY"
 
 compileSdkExtension = "19"
