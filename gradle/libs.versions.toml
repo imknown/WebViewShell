@@ -16,15 +16,15 @@ compileSdkExtension = "19"
 targetSdk = "36"
 targetSdkPreview = "CANARY"
 
-agp = "8.13.0"
+agp = "9.0.0"
 
-activity = "1.11.0"
+activity = "1.12.2"
 appcompat = "1.7.1"
 constraintlayout = "2.2.1"
 core = "1.17.0"
-webkit = "1.14.0"
+webkit = "1.15.0"
 
-kotlin = "2.2.20"
+kotlin = "2.3.0"
 
 material = "1.13.0"
 
@@ -39,4 +39,3 @@ material = { group = "com.google.android.material", name = "material", version.r
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

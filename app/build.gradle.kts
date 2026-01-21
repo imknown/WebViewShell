@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
 }
 
 private val buildVersion = libs.versions
@@ -32,6 +31,8 @@ android {
         versionCode = 3
         versionName = "1.0.2"
     }
+
+    base.archivesName = "IMK_WebViewShell-${defaultConfig.versionName}"
 
     buildTypes {
         release {
