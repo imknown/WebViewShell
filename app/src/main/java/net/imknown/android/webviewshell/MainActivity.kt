@@ -87,9 +87,11 @@ class MainActivity : AppCompatActivity() {
 
         initWebSettings()
 
-        etUrl.setText(URL_HOME)
+        val url = intent.dataString ?: URL_HOME
 
-        goUrl(URL_HOME)
+        etUrl.setText(url)
+
+        goUrl(url)
 
         btnGo.setOnClickListener {
             hideKeyboard()
