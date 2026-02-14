@@ -11,14 +11,14 @@ compileSdk = "36"
 compileSdkMinor = "1"
 compileSdkPreview = "CANARY"
 
-compileSdkExtension = "19"
+compileSdkExtension = "20"
 
 targetSdk = "36"
 targetSdkPreview = "CANARY"
 
-agp = "9.0.0"
+agp = "9.0.1"
 
-activity = "1.12.3"
+activity = "1.12.4"
 appcompat = "1.7.1"
 constraintlayout = "2.2.1"
 core = "1.17.0"
