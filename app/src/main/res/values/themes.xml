@@ -1,4 +1,3 @@
 <resources>
-
-    <style name="WebViewShell" parent="Theme.Material3.DayNight.NoActionBar" />
+    <style name="WebViewShell" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar" />
 </resources>
