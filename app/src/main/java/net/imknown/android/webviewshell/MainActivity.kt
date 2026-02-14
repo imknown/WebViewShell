@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Message
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import android.webkit.ClientCertRequest
 import android.webkit.ConsoleMessage
 import android.webkit.HttpAuthHandler
@@ -92,6 +93,15 @@ class MainActivity : AppCompatActivity() {
         etUrl.setText(url)
 
         goUrl(url)
+
+        etUrl.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_GO) {
+                btnGo.performClick()
+                true
+            } else {
+                false
+            }
+        }
 
         btnGo.setOnClickListener {
             hideKeyboard()
